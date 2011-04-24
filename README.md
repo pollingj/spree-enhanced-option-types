@@ -4,10 +4,10 @@ Now supporting Spree 0.50.x !
 
 ## Description
 
-This extension enchances spree functionality when handling products with
+This extension enhances spree functionality when handling products with
 numerous and complex variants.
 
-Following enchancements are provided:
+Following enhancements are provided:
 
 * Admin side:
   * Selecting order of option types for prototype with drag & drop
@@ -31,8 +31,8 @@ Following enchancements are provided:
   * products.js override (edge spree only) for working with variant images
 
 Some of the functionality might not work without javascript, but much work was put
-to make JS as unintrusive as possible, so It should be fairly easy excercise
-to make it completelly JS independent.
+to make JS as unobtrusive as possible, so It should be fairly easy exercise
+to make it completely JS independent.
 
 ## Credits
 
@@ -56,10 +56,10 @@ Second one shows selects - it's much more compact then previous example,
 
 Thrid shows the 2d table for variant choosing.
 
-## Instalation
+## Installation
 
 Add the following to your Gemfile:
-<code>gem 'spree_enhanced_option_types', :git => 'git://github.com/swistak/spree-enhanced-option-types.git'</code>
+<code>gem 'spree_enhanced_option_types', :git => 'git://github.com/humancopy/spree-enhanced-option-types.git'</code>
 
 Run:
 <code>bundle install</code>
