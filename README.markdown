@@ -1,5 +1,7 @@
 # Enchanced Option Types
 
+Now supporting Spree 0.30.x !
+
 ## Description
 
 This extension enchances spree functionality when handling products with
@@ -56,11 +58,17 @@ Thrid shows the 2d table for variant choosing.
 
 ## Instalation
 
-For git users:
-<code>git submodule add git://github.com/swistak/spree-enchanced-option-types.git vendor/extensions/enchanced_option_types</code>
+Add the following to your Gemfile:
+<code>gem 'spree_enhanced_option_types', :git => 'git://github.com/swistak/spree-enhanced-option-types.git'</code>
 
-for others (or git users that don't like submodules):
-<code>ruby script/extension install git://github.com/swistak/spree-enchanced-option-types.git</code>
+Run:
+<code>bundle install</code>
+
+and:
+<code>rake spree_enhance_option_types:install</code>
+
+and finally:
+<code>rake db:migrate</code>
 
 ## Customization
 
@@ -115,3 +123,4 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+

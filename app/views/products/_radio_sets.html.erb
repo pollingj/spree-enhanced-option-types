@@ -17,9 +17,9 @@
             :id => "ov_"+option_value.id.to_s, :class=> "option-value"
           ) %>
           <%= option_value.presentation %>
-          <% unless option_value.amount.blank? %>
+          <% unless option_value.price.blank? %>
             <span class="modifier" style="white-space:nowrap;">
-              (<%= "#{option_value.amount.sign_symbol} #{number_with_precision(option_value.amount.abs, :precision => 2)}" %>)
+              (<%= "#{option_value.price.sign_symbol} #{number_with_precision(option_value.price.abs, :precision => 2)}" %>)
             </span>
           <% end %>
         </li>
