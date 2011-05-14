@@ -1,6 +1,10 @@
 Admin::PrototypesController.class_eval do
   skip_after_filter :set_habtm_associations
 
+  update.after :reorder_option_types
+  create.after :reorder_option_types
+
+  protected
   def reorder_option_types
     set_habtm_associations
     @prototype.option_types_prototypes.each do |otp|
@@ -15,7 +19,4 @@ Admin::PrototypesController.class_eval do
         })
     end
   end
-  
-  update.after(:reorder_option_types)
-  create.after(:reorder_option_types)
 end
