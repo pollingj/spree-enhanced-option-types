@@ -11,15 +11,15 @@ Following enhancements are provided:
 
 * Admin side:
   * Selecting order of option types for prototype with drag & drop
-  * Optional "modifiers" for option values that can modify price of variant
+  * Optional "modifiers" for option values that can modify price, weight, width, height & depth of variant
   * Option to generate set of variants from prototype with option types.
     When option is selected during product creation, variants are created for
     each combination of option values (e.g.. Sizes: [S,M,L], Colors: [Red, Blue]
-    will generate 6 variants), with prices calculated from sum of product base price
+    will generate 6 variants), with option values (price, weight, width, height & depth) calculated from sum of product base value
     and amount of option_value modifiers.
   * Option to regenerate variants when needed.
-  * Option to calculate variant price when creating new variant based on product
-    price and sum of modifiers from option values.
+  * Option to calculate variant price, weight, width, height & depth when creating new variant based on product
+    base value and sum of modifiers from option values.
 * Client side variant selection:
   * using x select boxes (1 for each option_type)
   * using x sets of radio boxes grouped in fieldsets (one fieldset for each option type)
