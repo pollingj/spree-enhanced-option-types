@@ -1,4 +1,4 @@
-# Enchanced Option Types
+# Enhanced Option Types
 
 Now supporting Spree 0.50.x !
 
@@ -14,7 +14,7 @@ Following enhancements are provided:
   * Optional "modifiers" for option values that can modify price of variant
   * Option to generate set of variants from prototype with option types.
     When option is selected during product creation, variants are created for
-    each combination of option values (eg. Sizes: [S,M,L], Colors: [Red, Blue]
+    each combination of option values (e.g.. Sizes: [S,M,L], Colors: [Red, Blue]
     will generate 6 variants), with prices calculated from sum of product base price
     and amount of option_value modifiers.
   * Option to regenerate variants when needed.
@@ -26,7 +26,7 @@ Following enhancements are provided:
   * using 2d table of radio boxes (only when there are only 2 option types!)
 * Javascript helpers:
   * Instant updating of price based on variant selected using above methods
-  * Instand updating of number of on_hand units
+  * Instant updating of number of on_hand units
   * enabling/disabling options that don't have corresponding variant.
   * products.js override (edge spree only) for working with variant images
 
@@ -54,7 +54,7 @@ also notable is separation of base price and current(variant) price, only second
 Second one shows selects - it's much more compact then previous example,
  but doesn't instantly show all options.
 
-Thrid shows the 2d table for variant choosing.
+Third shows the 2d table for variant choosing.
 
 ## Installation
 
@@ -73,9 +73,9 @@ and finally:
 ## Customization
 
 User interface change is limited only to _cart_form partial from original spree.
-it was separated into several subfiles to make customization and embeding in custom layouts easier.
+it was separated into several subfiles to make customization and embedding in custom layouts easier.
 
-There are no inline styles (except for 2d table, that absolutelly requires
+There are no inline styles (except for 2d table, that absolutely requires
 some wire frame styles to look sane), you can either use provided _cart_form
 partial as a replacement for generic spree partial, or you can roll your own and
 only include one of variant choosing partials.
@@ -84,7 +84,7 @@ There are some special css classes you might be interested in:
 .price.update - price field that should be updated with new price value if variant changes.
 span.
 
-Source is extensivelly documented and I recomend reading it.
+Source is extensively documented and I recommend reading it.
 
 ## Limitations
 
@@ -92,7 +92,7 @@ Source is extensivelly documented and I recomend reading it.
 
 ## TODO
 
-- gracefull handling non-js users.
+- graceful handling non-js users.
 - test under other browsers then FF
 
 ## License
