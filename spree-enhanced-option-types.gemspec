@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_enhanced_option_types'
-  s.version     = '0.60.0'
+  s.version     = '0.70.99'
   s.summary     = 'Enchances Spree functionality when handling products with numerous and complex variants.'
   s.description = 'This extension enchances spree functionality when handling products with numerous and complex variants.'
   s.required_ruby_version = '>= 1.8.7'
@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = true
 
-  s.add_dependency('spree_core', '>= 0.60.0')
+  s.add_dependency('spree_core', '>= 0.70.99')
 end
