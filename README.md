@@ -1,6 +1,6 @@
 # Enhanced Option Types
 
-Now supporting Spree >= 0.70.99 !
+Now supporting Spree >= 0.60.0 !
 
 ## Description
 

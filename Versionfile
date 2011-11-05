@@ -1,1 +1,2 @@
-"0.70.99" => { :branch => "master" }
+"0.70.x" => { :branch => "master"}
+"0.60.x" => { :tag => "v1.0", :version => "1.0" }
