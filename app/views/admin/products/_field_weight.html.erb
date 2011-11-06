@@ -1,0 +1,5 @@
+<%= f.field_container :weight do %>
+  <%= f.label :weight, t("master_weight")%> <span class="required">*</span><br />
+  <%= f.text_field :weight, :value => number_with_precision(@product.weight, :precision => 2)  %>
+  <%= f.error_message_on :weight %>
+<% end %>

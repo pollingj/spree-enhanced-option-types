@@ -1,0 +1,5 @@
+<%= f.field_container :depth do %>
+  <%= f.label :depth, t("master_depth")%><br />
+  <%= f.text_field :depth, :value => number_with_precision(@product.depth, :precision => 2)  %>
+  <%= f.error_message_on :depth %>
+<% end %>

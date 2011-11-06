@@ -4,7 +4,7 @@ Product.class_eval do
 
   has_many :option_types, :through => :product_option_types, :order => "product_option_types.position ASC"
 
-  validates :weight, :width, :height, :depth, :presence => true, :on => :update
+  validates :weight, :width, :height, :presence => true
 
   def do_create_variants(force = false)
     if (create_variants == "1" || force) && self.option_types.length > 0

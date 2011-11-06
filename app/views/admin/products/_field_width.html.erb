@@ -1,0 +1,5 @@
+<%= f.field_container :width do %>
+  <%= f.label :width, t("master_width")%> <span class="required">*</span><br />
+  <%= f.text_field :width, :value => number_with_precision(@product.width, :precision => 2)  %>
+  <%= f.error_message_on :width %>
+<% end %>

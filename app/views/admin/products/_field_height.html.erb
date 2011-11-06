@@ -1,0 +1,5 @@
+<%= f.field_container :height do %>
+  <%= f.label :height, t("master_height")%> <span class="required">*</span><br />
+  <%= f.text_field :height, :value => number_with_precision(@product.height, :precision => 2)  %>
+  <%= f.error_message_on :height %>
+<% end %>

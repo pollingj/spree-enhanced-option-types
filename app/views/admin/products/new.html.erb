@@ -22,6 +22,9 @@
         <% end %>
       <% end %>
 
+      <%= render :partial => 'field_weight', :locals => {:f => f} %>
+      <%= render :partial => 'field_depth', :locals => {:f => f} %>
+
       <p>
         <%= f.label :prototype_id, t(:prototype) %><br />
         <%= f.collection_select :prototype_id, Prototype.all, :id, :name, :include_blank => true %>
@@ -36,6 +39,9 @@
         <%= f.error_message_on :price %>
       <% end %>
 
+      <%= render :partial => 'field_width', :locals => {:f => f} %>
+      <%= render :partial => 'field_height', :locals => {:f => f} %>
+
       <p>
         <%= f.label :available_on, t(:available_on) %><br />
         <%= f.error_message_on :available_on %>
@@ -44,7 +50,7 @@
 
 
     </div>
-    <%= render :partial => 'enhanced_option_new', :locals => {:f => f} %>
+    <%= render :partial => 'create_variants_checkbox', :locals => {:f => f} %>
   </div>
 
   <%= render :partial => 'admin/shared/new_resource_links' %>
