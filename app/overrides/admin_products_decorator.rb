@@ -5,3 +5,27 @@ Deface::Override.new(
   :partial => "admin/products/extra_master_values_form",
   :disabled => false
 )
+
+Deface::Override.new(
+  :virtual_path => "admin/products/_new",
+  :name => "enhanced_option_types_admin_products_new",
+  :insert_bottom => "[data-hook='new_product_attrs']",
+  :partial => "admin/products/create_variants_checkbox",
+  :disabled => false
+)
+
+Deface::Override.new(
+  :virtual_path => "admin/products/_new",
+  :name => "enhanced_option_types_admin_products_new",
+  :insert_before => ".left p:last-child",
+  :partial => "admin/products/extra_new_left",
+  :disabled => false
+)
+
+Deface::Override.new(
+  :virtual_path => "admin/products/_new",
+  :name => "enhanced_option_types_admin_products_new",
+  :insert_before => ".right p:last-child",
+  :partial => "admin/products/extra_new_right",
+  :disabled => false
+)
