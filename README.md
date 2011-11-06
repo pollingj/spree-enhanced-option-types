@@ -1,6 +1,6 @@
 # Enhanced Option Types
 
-Now supporting Spree >= 0.60.0 !
+Now supporting Spree >= 0.70.0 !
 
 ## Description
 
@@ -65,7 +65,7 @@ Run:
 <code>bundle install</code>
 
 and:
-<code>rake spree_enhance_option_types:install</code>
+<code>rake spree_enhanced_option_types:install</code>
 
 and finally:
 <code>rake db:migrate</code>

@@ -1,0 +1,1 @@
+Spree::Config.set(:variants_partial => 'radio_sets')

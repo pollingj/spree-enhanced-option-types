@@ -1,0 +1,6 @@
+<% OptionType.all.sort_by{|ot|
+  [
+    @prototype.option_types.include?(ot) ? 0 : 1,
+    @prototype.option_types.index(ot) || ot.name
+  ]
+}.each do |option_type| %>

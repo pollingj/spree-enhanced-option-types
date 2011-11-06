@@ -1,0 +1,33 @@
+/*
+ *= require store/spree_core
+*/
+table.t2d {
+
+}
+
+table.t2d td{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+table.t2d th{
+  text-align: center;
+}
+
+table.t2d td.option.left{
+  text-align: right;
+  border-bottom: 1px solid #444;
+}
+
+table.t2d td.option.top{
+  border-right: 1px solid #444;
+}
+
+table.t2d td.y-axis {
+  font-weight: bold;
+  border: none;
+}

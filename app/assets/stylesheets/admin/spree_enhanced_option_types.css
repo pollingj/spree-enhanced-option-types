@@ -1,0 +1,7 @@
+/*
+ *= require admin/spree_core
+*/
+#option-types.checkbox-list li {
+  display: block;
+  float: none;
+}
