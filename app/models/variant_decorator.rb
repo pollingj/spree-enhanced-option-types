@@ -63,7 +63,8 @@ Variant.class_eval do
 
   private
   def calculate_parameter(parameter_name, master_value = nil)
-    value = (master_value || (product.master.respond_to?(parameter_name) && product.master.send(parameter_name))).to_f
+    value = master_value || (product.master.respond_to?(parameter_name) && product.master.send(parameter_name))
+    value = value ? value.to_f : 0.0
     value += self.option_values.map{|ov| ov.send(parameter_name).to_f}.sum
     value > 0 ? value : 0
   end
