@@ -22,8 +22,7 @@
         <% end %>
       <% end %>
 
-      <%= render :partial => 'field_weight', :locals => {:f => f} %>
-      <%= render :partial => 'field_depth', :locals => {:f => f} %>
+      <%= render :partial => 'extra_new_left', :locals => {:f => f} %>
 
       <p>
         <%= f.label :prototype_id, t(:prototype) %><br />
@@ -39,8 +38,7 @@
         <%= f.error_message_on :price %>
       <% end %>
 
-      <%= render :partial => 'field_width', :locals => {:f => f} %>
-      <%= render :partial => 'field_height', :locals => {:f => f} %>
+      <%= render :partial => 'extra_new_right', :locals => {:f => f} %>
 
       <p>
         <%= f.label :available_on, t(:available_on) %><br />
