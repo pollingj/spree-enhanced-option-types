@@ -44,9 +44,9 @@ You can(and should!) read it.
 
 ## Examples
 
-![Radiobox sets](/swistak/spree-enchanced-option-types/raw/master/doc/sets.jpg)
-![selects sets](/swistak/spree-enchanced-option-types/raw/master/doc/selects.jpg)
-![table](/swistak/spree-enchanced-option-types/raw/master/doc/2d.jpg)
+![Radiobox sets](/swistak/spree-enhanced-option-types/raw/master/doc/sets.jpg)
+![selects sets](/swistak/spree-enhanced-option-types/raw/master/doc/selects.jpg)
+![table](/swistak/spree-enhanced-option-types/raw/master/doc/2d.jpg)
 
 On first example you can see sets of radio boxes and modifiers in action,
 also notable is separation of base price and current(variant) price, only second one is updatable.
@@ -65,7 +65,7 @@ Run:
 <code>bundle install</code>
 
 and:
-<code>rake spree_enhanced_option_types:install</code>
+<code>bundle exec rake spree_enhanced_option_types:install</code>
 
 and finally:
 <code>rake db:migrate</code>
