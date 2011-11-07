@@ -1,6 +1,6 @@
 ActiveSupport::Notifications.subscribe "spree.cart.add" do |name, start, finish, id, payload|
   order = payload[:order]
-  params = payload[:params]
+  params = payload[:params] || {}
   params[:option_values].each_pair do |product_id, otov|
     if !params[:quantity].is_a?(Array)
       quantity = params[:quantity].to_i
