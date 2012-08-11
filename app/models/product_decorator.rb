@@ -1,4 +1,4 @@
-Product.class_eval do
+Spree::Product.class_eval do
   attr_accessor :create_variants
   after_create :do_create_variants
 

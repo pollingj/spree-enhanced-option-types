@@ -1,4 +1,4 @@
-Variant.class_eval do
+Spree::Variant.class_eval do
   after_update :adjust_variant_modifiers, :if => :is_master
   before_create :set_variant_modifiers
 

@@ -1,4 +1,4 @@
-OrdersController.class_eval do
+Spree::OrdersController.class_eval do
   def populate
     @order = current_order(true)
 

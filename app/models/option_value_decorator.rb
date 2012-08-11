@@ -1,4 +1,4 @@
-OptionValue.class_eval do
+Spree::OptionValue.class_eval do
   validates_numericality_of :price,  :allow_nil => true
   validates_numericality_of :weight,  :allow_nil => true
   validates_numericality_of :width,   :allow_nil => true
