@@ -5,12 +5,12 @@ Spree::OrdersController.class_eval do
     params[:products].each do |product_id,variant_id|
       quantity = params[:quantity].to_i if !params[:quantity].is_a?(Hash)
       quantity = params[:quantity][variant_id.to_i].to_i if params[:quantity].is_a?(Hash)
-      @order.add_variant(Variant.find(variant_id), quantity) if quantity > 0
+      @order.add_variant(Spree::Variant.find(variant_id), quantity) if quantity > 0
     end if params[:products]
 
     params[:variants].each do |variant_id, quantity|
       quantity = quantity.to_i
-      @order.add_variant(Variant.find(variant_id), quantity) if quantity > 0
+      @order.add_variant(Spree::Variant.find(variant_id), quantity) if quantity > 0
     end if params[:variants]
 
     params[:option_values].each_pair do |product_id, otov|
@@ -20,7 +20,7 @@ Spree::OrdersController.class_eval do
         quantity = params[:quantity][variant_id].to_i
       end
       option_value_ids = otov.map{|option_type_id, option_value_id| option_value_id}
-      variant = Variant.by_option_value_ids(option_value_ids, product_id).first
+      variant = Spree::Variant.by_option_value_ids(option_value_ids, product_id).first
       @order.add_variant(variant, quantity) if quantity > 0
     end if params[:option_values]
 

@@ -3,21 +3,21 @@ Spree::Variant.class_eval do
   before_create :set_variant_modifiers
 
   def self.by_option_value_ids(option_value_ids, product_id)
-    Variant.find_by_sql(['
+    Spree::Variant.find_by_sql(['
         SELECT
-          option_values_variants.variant_id as id
+          spree_option_values_variants.variant_id as id
         FROM
-          option_values_variants, variants
+          spree_option_values_variants, spree_variants
         WHERE
-          option_values_variants.option_value_id IN (?) 
+          spree_option_values_variants.option_value_id IN (?) 
             AND
-          option_values_variants.variant_id = variants.id
+          spree_option_values_variants.variant_id = spree_variants.id
             AND
-          variants.product_id = ?
+          spree_variants.product_id = ?
         GROUP BY
-          option_values_variants.variant_id
+          spree_option_values_variants.variant_id
         HAVING
-          COUNT(option_values_variants.variant_id) = ?',
+          COUNT(spree_option_values_variants.variant_id) = ?',
         option_value_ids, product_id, option_value_ids.length
       ]).map(&:reload)
   end

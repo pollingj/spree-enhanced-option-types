@@ -2,7 +2,7 @@ Spree::Product.class_eval do
   attr_accessor :create_variants
   after_create :do_create_variants
 
-  has_many :option_types, :through => :product_option_types, :order => "product_option_types.position ASC"
+  has_many :option_types, :through => :product_option_types, :order => "spree_product_option_types.position ASC"
 
   validates :weight, :width, :height, :presence => true
 
@@ -12,7 +12,7 @@ Spree::Product.class_eval do
         sku = option_values.map(&:sku).reject(&:blank?).join("-")
         sku = index+1 if sku.blank?
 
-        v = Variant.create({
+        v = Spree::Variant.create({
             :product => self,
             :option_values => option_values,
             :is_master => false,

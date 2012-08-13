@@ -5,7 +5,7 @@ module VariantSelection
   def options_values_combinations(product)
     product.variants.map{|v| # we get all variants from product
       # then we take all option_values
-      v.option_values.includes({:option_type => :product_option_types}).order("product_option_types.position").map(&:id) # and get the id
+      v.option_values.includes({:option_type => :product_option_types}).order("spree_product_option_types.position").map(&:id) # and get the id
     }
   end
 
@@ -20,7 +20,7 @@ module VariantSelection
     product.variants.map{|v|
       # we get all variants from product
       # then we take all option_values sorted by position of option value in product
-      key = v.option_values.includes({:option_type => :product_option_types}).order("product_option_types.position").map(&:id)
+      key = v.option_values.includes({:option_type => :product_option_types}).order("spree_product_option_types.position").map(&:id)
       result[key] = v
     }
     return result
