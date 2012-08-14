@@ -1,10 +1,12 @@
 Spree::Product.class_eval do
-  attr_accessible :create_variants
+  attr_accessor :create_variants
   after_create :do_create_variants
 
   has_many :option_types, :through => :product_option_types, :order => "spree_product_option_types.position ASC"
 
   validates :weight, :width, :height, :presence => true
+  
+  attr_accessible :create_variants
 
   def do_create_variants(force = false)
     if (create_variants == "1" || force) && self.option_types.length > 0
