@@ -1,5 +1,5 @@
 Spree::Product.class_eval do
-  attr_accessor :create_variants
+  attr_accessible :create_variants
   after_create :do_create_variants
 
   has_many :option_types, :through => :product_option_types, :order => "spree_product_option_types.position ASC"
