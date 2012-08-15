@@ -4,7 +4,7 @@ Spree::Product.class_eval do
 
   has_many :option_types, :through => :product_option_types, :order => "spree_product_option_types.position ASC"
 
-  validates :weight, :width, :height, :presence => true
+  #validates :weight, :width, :height, :presence => true
   
   attr_accessible :create_variants
 
