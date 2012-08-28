@@ -5,7 +5,7 @@ Spree::OptionValue.class_eval do
   validates_numericality_of :height,  :allow_nil => true
   validates_numericality_of :depth,  :allow_nil => true
   
-  after_update :adjust_variant_modifiers
+  #after_update :adjust_variant_modifiers
 
   def adjust_variant_modifiers
     updated_attributes = [:price, :weight, :width, :height, :depth].select { |x| self.send(:"#{x}_changed?") }
