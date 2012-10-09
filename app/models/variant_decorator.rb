@@ -14,6 +14,8 @@ Spree::Variant.class_eval do
           spree_option_values_variants.variant_id = spree_variants.id
             AND
           spree_variants.product_id = ?
+            AND
+          spree_variants.deleted_at IS NULL
         GROUP BY
           spree_option_values_variants.variant_id
         HAVING
